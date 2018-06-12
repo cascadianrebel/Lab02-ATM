@@ -7,10 +7,10 @@ xunit testing.
 
 ## Features
 This is an ATM. It can check account balances, withdraw, and deposit money into the account. There are safeguards against incorrect entry formats.
-![Main Display](/Assets/MainDisplay.PNG)
-![Deposit Screen](/Assets/Deposit.PNG)
-![View Balance](/Assets/ViewBalance.PNG)
-![Withdrawal Screen](/Assets/Withdrawal.PNG)
+![Main Display](/Lab02-ATM/Assets/MainDisplay.PNG)
+![Deposit Screen](/Lab02-ATM/Assets/Deposit.PNG)
+![View Balance](/Lab02-ATM/Assets/ViewBalance.PNG)
+![Withdrawal Screen](/Lab02-ATM/Assets/Withdrawal.PNG)
 
 
 ## Resources
