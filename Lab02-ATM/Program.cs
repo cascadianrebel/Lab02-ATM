@@ -46,6 +46,7 @@ namespace Lab02_ATM
                 Thread.Sleep(2000);
                 Console.Clear();
                 Prompt();
+                throw;
             }
 
         }
@@ -133,28 +134,32 @@ namespace Lab02_ATM
         /// <returns>new account balance</returns>
         public static decimal DepositFunds()
         {
+            Console.Clear();
             Console.WriteLine("----------------------------------------");
             Console.WriteLine($"Account Balance: ${ViewBalance()}");
             Console.WriteLine("Enter the Deposit amount:");
             Console.WriteLine("----------------------------------------");
             decimal amount = Convert.ToDecimal(Console.ReadLine());
 
-            try
+            if (amount > 0)
             {
-                int PromptResponse = Convert.ToInt32(Console.ReadLine());
                 //if number is input, add to account
                 AcctBalance += amount;
                 Console.WriteLine("----------------------------------------");
                 Console.WriteLine($"Deposited Funds: ${amount}");
                 Console.WriteLine($"Your new balance is: ${ ViewBalance()}");
                 Console.WriteLine("----------------------------------------");
+                Prompt();
+                return ViewBalance();
+
+            }
+            else
+            {
+                Console.WriteLine("Please only enter numbers");
+                Prompt();
                 return ViewBalance();
             }
-            catch (FormatException e)
-            {
-                Console.WriteLine(e.Message);
-                throw;
-            }
+
 
         }
 
